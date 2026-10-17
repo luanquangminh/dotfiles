@@ -1,6 +1,6 @@
-# Windows bootstrap for luanquangminh/dotfiles
+# Windows bootstrap for minhnhb1304/dotfiles
 # Usage (run in a NON-admin PowerShell):
-#   irm https://raw.githubusercontent.com/luanquangminh/dotfiles/master/setup.ps1 | iex
+#   irm https://raw.githubusercontent.com/minhnhb1304/dotfiles/master/setup.ps1 | iex
 $ErrorActionPreference = "Stop"
 
 function Test-Cmd($name) {
@@ -42,11 +42,11 @@ if (-not (Test-Cmd chezmoi)) {
 # Confirm chezmoi resolves in THIS session before using it (a freshly installed CLI's
 # PATH entry is often only in the registry, not the current process).
 if (-not (Test-Cmd chezmoi)) {
-    throw "chezmoi was installed but is not on PATH in this session. Open a NEW PowerShell window and re-run: irm https://raw.githubusercontent.com/luanquangminh/dotfiles/master/setup.ps1 | iex"
+    throw "chezmoi was installed but is not on PATH in this session. Open a NEW PowerShell window and re-run: irm https://raw.githubusercontent.com/minhnhb1304/dotfiles/master/setup.ps1 | iex"
 }
 
 # 2) Initialize from this repo and apply.
 #    chezmoi prompts for git name/email; Windows-only targeting is handled by .chezmoiignore.
-chezmoi init --apply luanquangminh
+chezmoi init --apply minhnhb1304
 
 Write-Host "[setup] done. Open a new PowerShell session to load your profile."

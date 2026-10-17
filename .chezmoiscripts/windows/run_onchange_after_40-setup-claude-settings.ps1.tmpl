@@ -1,0 +1,18 @@
+# Write Claude Code user settings to ~/.claude/settings.json.
+# ~/.claude is ignored on Windows (it is a symlink to .ccp/profiles/default on Unix),
+# so the file is written by this script instead of being a managed target.
+# Re-runs when the settings content changes.
+# settings hash: {{ includeTemplate "claude-settings.json" . | sha256sum }}
+$ErrorActionPreference = "Stop"
+
+$content = @'
+{{ includeTemplate "claude-settings.json" . }}
+'@
+
+$dir = Join-Path $HOME ".claude"
+if (-not (Test-Path $dir)) {
+    New-Item -ItemType Directory -Path $dir -Force | Out-Null
+}
+$path = Join-Path $dir "settings.json"
+[System.IO.File]::WriteAllText($path, $content, (New-Object System.Text.UTF8Encoding($false)))
+Write-Host "[claude] wrote $path"

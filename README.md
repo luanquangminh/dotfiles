@@ -6,12 +6,12 @@ A comprehensive dotfiles setup that configures development environments for macO
 
 Basic installation:
 ```bash
-curl -L https://raw.githubusercontent.com/luanquangminh/dotfiles/master/setup.sh | bash
+curl -L https://raw.githubusercontent.com/minhnhb1304/dotfiles/master/setup.sh | bash
 ```
 
 With command line options:
 ```bash
-curl -L https://raw.githubusercontent.com/luanquangminh/dotfiles/master/setup.sh | bash -s -- [OPTIONS]
+curl -L https://raw.githubusercontent.com/minhnhb1304/dotfiles/master/setup.sh | bash -s -- [OPTIONS]
 ```
 
 ## Installation Options
@@ -23,13 +23,13 @@ curl -L https://raw.githubusercontent.com/luanquangminh/dotfiles/master/setup.sh
 Examples:
 ```bash
 # Minimal installation
-curl -L https://raw.githubusercontent.com/luanquangminh/dotfiles/master/setup.sh | bash -s -- -m
+curl -L https://raw.githubusercontent.com/minhnhb1304/dotfiles/master/setup.sh | bash -s -- -m
 
 # Installation without sudo
-curl -L https://raw.githubusercontent.com/luanquangminh/dotfiles/master/setup.sh | bash -s -- -n
+curl -L https://raw.githubusercontent.com/minhnhb1304/dotfiles/master/setup.sh | bash -s -- -n
 
 # Minimal installation without sudo
-curl -L https://raw.githubusercontent.com/luanquangminh/dotfiles/master/setup.sh | bash -s -- -m -n
+curl -L https://raw.githubusercontent.com/minhnhb1304/dotfiles/master/setup.sh | bash -s -- -m -n
 ```
 
 ## Windows (native)
@@ -37,7 +37,7 @@ curl -L https://raw.githubusercontent.com/luanquangminh/dotfiles/master/setup.sh
 In PowerShell (no admin required):
 
 ```powershell
-irm https://raw.githubusercontent.com/luanquangminh/dotfiles/master/setup.ps1 | iex
+irm https://raw.githubusercontent.com/minhnhb1304/dotfiles/master/setup.ps1 | iex
 ```
 
 This installs chezmoi + [Scoop](https://scoop.sh), applies the cross-platform configs

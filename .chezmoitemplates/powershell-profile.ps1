@@ -1,4 +1,4 @@
-# PowerShell profile managed by chezmoi (luanquangminh/dotfiles).
+# PowerShell profile managed by chezmoi (minhnhb1304/dotfiles).
 # Mirrors the zsh setup: mise activation, starship prompt, and common aliases.
 # Edit the source at .chezmoitemplates/powershell-profile.ps1, then `chezmoi apply`.
 

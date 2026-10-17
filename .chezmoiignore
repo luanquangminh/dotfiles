@@ -23,6 +23,11 @@
 .claude.json
 {{ end }}
 
+# Keep my custom Claude Code status line local (never manage/overwrite)
+.ccp/profiles/default/statusline.sh
+.ccp/profiles/default/statusline.sh.bak
+.ccp/profiles/default/settings-fragment.json
+
 # --- OS targeting -----------------------------------------------------------
 # On non-Windows: skip the Windows-only scripts and bootstrap.
 {{ if ne .chezmoi.os "windows" }}
@@ -46,6 +51,20 @@ setup.ps1
 # chezmoi strips run_once_/after_ prefixes, so target names are e.g. 55-setup-mise-config.sh
 # -> match all bash scripts (covers setup.sh too).
 *.sh
+# modify_dot_gitconfig.tmpl is a /bin/sh script; chezmoi cannot run it natively on Windows.
+.gitconfig
 Brewfile.setup
 terminator.vbs
+# --- local override (Windows machine) ---
+# Keep the REAL ~/.claude directory: the repo would replace it with a symlink to
+# .ccp/profiles/default, deleting credentials/sessions/plugins. Claude config is
+# installed separately from the claude-skill repo instead.
+.claude
+# Repo artifacts that are not dotfiles - keep $HOME clean.
+README.md
+setup.ps1
+bak.chezmoiexternal.toml
+# Windows cannot create symlinks without Developer Mode/admin; this entry is a
+# symlink in the repo. It is materialised as a real file copy instead.
+.ccp/hub/skills/lead-researcher/references/language-matrix.md
 {{ end }}

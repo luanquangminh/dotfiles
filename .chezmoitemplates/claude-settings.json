@@ -1,0 +1,28 @@
+{
+  "model": "opus",
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "pwsh -NoProfile -File \"C:/Users/ASUS/.claude/statusline-command.ps1\""
+  },
+  "effortLevel": "high",
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "high"
+    },
+    "claude-opus-5-5": {
+      "effortLevel": "medium"
+    }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "syncClaudeAiSkills": false,
+  "syncClaudeAiPlugins": false,
+  "disableClaudeAiConnectors": true,
+  "autoUploadSessions": false,
+  "remoteControlAtStartup": false,
+  "disableRemoteControl": true,
+  "theme": "dark-ansi"
+}

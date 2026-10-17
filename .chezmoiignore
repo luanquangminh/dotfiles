@@ -55,4 +55,16 @@ setup.ps1
 .gitconfig
 Brewfile.setup
 terminator.vbs
+# --- local override (Windows machine) ---
+# Keep the REAL ~/.claude directory: the repo would replace it with a symlink to
+# .ccp/profiles/default, deleting credentials/sessions/plugins. Claude config is
+# installed separately from the claude-skill repo instead.
+.claude
+# Repo artifacts that are not dotfiles - keep $HOME clean.
+README.md
+setup.ps1
+bak.chezmoiexternal.toml
+# Windows cannot create symlinks without Developer Mode/admin; this entry is a
+# symlink in the repo. It is materialised as a real file copy instead.
+.ccp/hub/skills/lead-researcher/references/language-matrix.md
 {{ end }}

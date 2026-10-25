@@ -6,8 +6,7 @@
     "tools",
     "skills",
     "agents",
-    "todos",
-    "sessionTime"
+    "todos"
   ],
   "gitStatus": {
     "enabled": true,
@@ -27,14 +26,15 @@
     "showAgents": true,
     "showAgentEffort": true,
     "showTodos": true,
-    "showDuration": true,
+    "showDuration": false,
     "showOutputStyle": true,
     "showPromptCache": true,
     "showContextBar": false,
     "showEffortLevel": true,
     "effortFormat": "full",
-    "showDailyCost": true,
-    "showWeeklyCost": true
+    "showDailyCost": false,
+    "showWeeklyCost": false,
+    "showCost": false
   },
   "colors": {
     "context": "#8be9fd",

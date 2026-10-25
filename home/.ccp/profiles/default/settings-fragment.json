@@ -34,7 +34,7 @@
     "MEDIASIFT_ON": "me.ubuntu.home"
   },
   "inputNeededNotifEnabled": true,
-  "model": "sonnet",
+  "model": "fable",
   "modelSettings": {
     "claude-fable-5": {
       "effortLevel": "xhigh"

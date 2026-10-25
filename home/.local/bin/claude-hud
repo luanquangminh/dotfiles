@@ -1,41 +1,10 @@
 #!/bin/bash
-# claude-hud wrapper for the Claude Code statusLine.
-# 1. Runs the newest installed claude-hud plugin (picked by version, not mtime).
-# 2. Appends the Claude service status (status.claude.com) to the first HUD line:
-#    ● ok / degraded / incident / maintenance. The JSON is cached for 5 minutes and
-#    refreshed in the background, so the status line never waits on the network.
-set -u
-input=$(cat)
+# Claude Code statusLine entry point. Prefers the Python renderer (plugin + status line +
+# gauges, see claude-hud.py); without python3 it falls back to the bare claude-hud plugin.
+here="$(cd "$(dirname "$(readlink "${BASH_SOURCE[0]}" 2>/dev/null || echo "${BASH_SOURCE[0]}")")" && pwd)"
+if command -v python3 >/dev/null 2>&1 && [ -f "$here/claude-hud.py" ]; then
+  exec python3 "$here/claude-hud.py"
+fi
 dir=$(ls -d "$HOME"/.claude/plugins/cache/claude-hud/claude-hud/*/ 2>/dev/null | sort -V | tail -1)
-if [ -z "$dir" ] || [ ! -f "${dir}dist/index.js" ]; then
-  echo "claude-hud plugin not found"; exit 0
-fi
-out=$(printf '%s' "$input" | node "${dir}dist/index.js")
-
-cache="${TMPDIR:-/tmp}/claude-hud-status.json"
-if [ ! -f "$cache" ] || [ -n "$(find "$cache" -mmin +5 2>/dev/null)" ]; then
-  ( curl -s -m 4 https://status.claude.com/api/v2/status.json -o "$cache.tmp" \
-      && mv -f "$cache.tmp" "$cache" ) >/dev/null 2>&1 &
-fi
-
-seg=""
-if [ -f "$cache" ]; then
-  ind=$(sed -n 's/.*"indicator": *"\([a-z]*\)".*/\1/p' "$cache" | head -1)
-  dim=$'\e[2m'; off=$'\e[0m'
-  case "$ind" in
-    none)           seg=$'\e[38;2;158;206;106m●'"$off ${dim}Claude ok$off" ;;
-    minor)          seg=$'\e[38;2;224;175;104m●'"$off ${dim}Claude degraded$off" ;;
-    major|critical) seg=$'\e[38;2;247;118;142m●'"$off ${dim}Claude incident$off" ;;
-    maintenance)    seg=$'\e[38;2;122;162;247m●'"$off ${dim}Claude maintenance$off" ;;
-  esac
-fi
-
-if [ -n "$seg" ]; then
-  first=${out%%$'\n'*}
-  rest=${out#*$'\n'}
-  [ "$first" = "$out" ] && rest=""
-  printf '%s \e[2m│\e[0m %s\n' "$first" "$seg"
-  [ -n "$rest" ] && printf '%s\n' "$rest"
-else
-  printf '%s\n' "$out"
-fi
+[ -n "$dir" ] && exec node "${dir}dist/index.js"
+cat >/dev/null; echo "claude-hud plugin not found"

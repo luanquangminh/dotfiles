@@ -1,7 +1,14 @@
 {
   "lineLayout": "expanded",
   "pathLevels": 2,
-  "elementOrder": ["project", "context", "usage", "promptCache", "tools", "skills", "agents", "todos", "sessionTime"],
+  "elementOrder": [
+    "project",
+    "tools",
+    "skills",
+    "agents",
+    "todos",
+    "sessionTime"
+  ],
   "gitStatus": {
     "enabled": true,
     "showDirty": true,
@@ -11,14 +18,8 @@
     "pushCriticalThreshold": 10
   },
   "display": {
-    "contextValue": "both",
-    "showUsage": true,
-    "usageBarEnabled": true,
-    "usageCompact": false,
-    "showResetLabel": false,
-    "timeFormat": "relative",
-    "sevenDayThreshold": 0,
-    "mergeGroups": [["context", "usage"]],
+    "showUsage": false,
+    "mergeGroups": [],
     "showTools": true,
     "toolsMaxVisible": 4,
     "toolNameMaxLength": 18,
@@ -28,7 +29,12 @@
     "showTodos": true,
     "showDuration": true,
     "showOutputStyle": true,
-    "showPromptCache": true
+    "showPromptCache": true,
+    "showContextBar": false,
+    "showEffortLevel": true,
+    "effortFormat": "full",
+    "showDailyCost": true,
+    "showWeeklyCost": true
   },
   "colors": {
     "context": "#7aa2f7",

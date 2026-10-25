@@ -16,7 +16,7 @@
 
 set -euo pipefail
 
-REPO_URL="https://github.com/samhvw8/dotfiles.git"
+REPO_URL="https://github.com/luanquangminh/dotfiles.git"
 DOTFILES_DIR="$HOME/.dotfiles"
 TIMESTAMP="$(date +%Y%m%d-%H%M%S)"
 BACKUP_DIR="$HOME/.dotfiles-backup-$TIMESTAMP"

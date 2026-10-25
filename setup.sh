@@ -9,7 +9,7 @@
 
 set -euo pipefail
 
-REPO_URL="https://github.com/samhvw8/dotfiles.git"
+REPO_URL="https://github.com/luanquangminh/dotfiles.git"
 DOTFILES_DIR="$HOME/.dotfiles"
 MISE_CONFIG_DIR="$HOME/.config/mise"
 # Oldest mise with everything the config uses ([dotfiles], `mise dot`, bootstrap).
@@ -109,7 +109,7 @@ ensure_sudo() {
     if ! tty_available; then
         log_error "Administrator access is needed, but there is no terminal to read a password from."
         log_error "Re-run interactively instead of piping, e.g.:"
-        log_error "  bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/samhvw8/dotfiles/main/setup.sh)\""
+        log_error "  bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/luanquangminh/dotfiles/main/setup.sh)\""
         return 1
     fi
 

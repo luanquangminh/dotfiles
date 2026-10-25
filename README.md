@@ -7,13 +7,13 @@ clones repositories, links dotfiles and installs tools.
 ## Install
 
 ```bash
-curl -L https://raw.githubusercontent.com/samhvw8/dotfiles/main/setup.sh | bash
+curl -L https://raw.githubusercontent.com/luanquangminh/dotfiles/main/setup.sh | bash
 ```
 
 For a minimal install (servers), pass `--minimal`:
 
 ```bash
-curl -L https://raw.githubusercontent.com/samhvw8/dotfiles/main/setup.sh | bash -s -- --minimal
+curl -L https://raw.githubusercontent.com/luanquangminh/dotfiles/main/setup.sh | bash -s -- --minimal
 ```
 
 `setup.sh`:

@@ -1,4 +1,4 @@
-# Sam's global instructions
+# Minh's global instructions
 
 Always respond in English. These rules are mandatory, not preferences. Apply them
 without reciting them. When one is wrong for the task, say so and say what you do

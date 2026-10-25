@@ -1,0 +1,48 @@
+{
+  "lineLayout": "expanded",
+  "pathLevels": 2,
+  "elementOrder": ["project", "context", "usage", "promptCache", "tools", "skills", "agents", "todos", "sessionTime"],
+  "gitStatus": {
+    "enabled": true,
+    "showDirty": true,
+    "showAheadBehind": true,
+    "showFileStats": true,
+    "pushWarningThreshold": 3,
+    "pushCriticalThreshold": 10
+  },
+  "display": {
+    "contextValue": "both",
+    "showUsage": true,
+    "usageBarEnabled": true,
+    "usageCompact": false,
+    "showResetLabel": false,
+    "timeFormat": "relative",
+    "sevenDayThreshold": 0,
+    "mergeGroups": [["context", "usage"]],
+    "showTools": true,
+    "toolsMaxVisible": 4,
+    "toolNameMaxLength": 18,
+    "showSkills": true,
+    "showAgents": true,
+    "showAgentEffort": true,
+    "showTodos": true,
+    "showDuration": true,
+    "showOutputStyle": true,
+    "showPromptCache": true
+  },
+  "colors": {
+    "context": "#7aa2f7",
+    "usage": "#bb9af7",
+    "warning": "#e0af68",
+    "usageWarning": "#ff9e64",
+    "critical": "#f7768e",
+    "model": "#7dcfff",
+    "project": "#9ece6a",
+    "git": "#565f89",
+    "gitBranch": "#c0caf5",
+    "label": "dim",
+    "custom": "#565f89",
+    "barFilled": "▰",
+    "barEmpty": "▱"
+  }
+}

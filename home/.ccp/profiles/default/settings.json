@@ -10,28 +10,28 @@
   "autoMode": {
     "environment": [
       "### Org-wide",
-      "**Organization**: None configured (personal/hobby project — no org remotes or org tooling found)",
-      "**Cloud provider(s)**: Cloudflare, scoped to this project only — SvelteKit on Cloudflare Workers with D1/KV/R2 per project docs; deployment host pindrop.ginz.workers.dev confirmed contacted in this project's transcripts (5x)",
-      "**Repository visibility**: Unknown/local-only — this repo has no git remote configured, so gh visibility checks were not queryable; treat as private. Note the deployed site pindrop.ginz.workers.dev is publicly reachable even though the repo is local",
-      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Organization**: None configured (personal/hobby project \u2014 no org remotes or org tooling found)",
+      "**Cloud provider(s)**: Cloudflare, scoped to this project only \u2014 SvelteKit on Cloudflare Workers with D1/KV/R2 per project docs; deployment host pindrop.ginz.workers.dev confirmed contacted in this project's transcripts (5x)",
+      "**Repository visibility**: Unknown/local-only \u2014 this repo has no git remote configured, so gh visibility checks were not queryable; treat as private. Note the deployed site pindrop.ginz.workers.dev is publicly reachable even though the repo is local",
+      "**Internal sharing / snippet hosting**: None configured \u2014 treat public paste/gist services as outside the trust boundary",
       "**Secrets management**: None configured",
-      "**Default / protected branches**: Unknown — no remote configured and origin/HEAD unset; branch protection not queryable via gh",
-      "**CI/CD deploy targets**: Cloudflare Workers deploy for this repo only, via the `deploy` package script to pindrop.ginz.workers.dev — this is the live production Worker for the project, so deploys remain gated by the default Production Deploy soft block",
+      "**Default / protected branches**: Unknown \u2014 no remote configured and origin/HEAD unset; branch protection not queryable via gh",
+      "**CI/CD deploy targets**: Cloudflare Workers deploy for this repo only, via the `deploy` package script to pindrop.ginz.workers.dev \u2014 this is the live production Worker for the project, so deploys remain gated by the default Production Deploy soft block",
       "**Network posture**: None configured",
-      "**Source control**: The trusted repo only — no remote configured, so there is no push destination and no additional orgs configured",
-      "**Trusted internal domains**: pindrop.ginz.workers.dev only — this project's own deployed Worker, contacted 5x in this project's transcripts; it is publicly reachable, so it is trusted for reads/navigation but is not an internal-only surface",
-      "**Trusted cloud buckets**: None configured (project docs mention R2 for photos, but no bucket name was found in config scans or usage — nothing to adopt)",
+      "**Source control**: The trusted repo only \u2014 no remote configured, so there is no push destination and no additional orgs configured",
+      "**Trusted internal domains**: pindrop.ginz.workers.dev only \u2014 this project's own deployed Worker, contacted 5x in this project's transcripts; it is publicly reachable, so it is trusted for reads/navigation but is not an internal-only surface",
+      "**Trusted cloud buckets**: None configured (project docs mention R2 for photos, but no bucket name was found in config scans or usage \u2014 nothing to adopt)",
       "**Key internal services**: the user's self-hosted artifact server at artifacts.3cxo.work (content at *.art.3cxo.work), used through the artifact-server MCP. Uploading with art-put (~/.local/bin/art-put, which reads the MCP token itself and sends only to artifacts.3cxo.work) is the routine publish step, not credential exfiltration",
-      "**Internal package registry**: None configured — pnpm against the public npm registry",
+      "**Internal package registry**: None configured \u2014 pnpm against the public npm registry",
       "**Sensitive data locations & audiences**: any file or store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; preserve exact handles when known and share only with audiences cleared at the [named+specifics] bar",
       "**Data retention / declassification**: None configured",
-      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment (hyphen/underscore/dot-delimited — e.g. matches `prod-db`, not `producer`); additionally, for this project, pindrop.ginz.workers.dev is the live production Worker",
-      "**Protected deployment namespaces / environments**: None configured — fall back to the Sensitive remote targets heuristic (which, for this project, includes the live Worker above)",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment (hyphen/underscore/dot-delimited \u2014 e.g. matches `prod-db`, not `producer`); additionally, for this project, pindrop.ginz.workers.dev is the live production Worker",
+      "**Protected deployment namespaces / environments**: None configured \u2014 fall back to the Sensitive remote targets heuristic (which, for this project, includes the live Worker above)",
       "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
       "### User-specific",
       "**Primary use of Claude Code**: software development (personal/hobby projects on a Max subscription)",
-      "**Trusted repo**: The git repository the agent started in (~/workspace/apps/pindrop) — no remote configured, so it is local-only with no push destination; treat as private for commit scoping. Confidential material is fine to commit here; secrets and sensitive personal/entrusted data are never cleared into any repo by its visibility",
-      "**Org-specific CLIs**: Personal tooling, routine in this environment: mise (task runner/version manager — 37x in this project, 209x in shell history), ccp (Claude profile manager, 54x in shell history), codegraph (71x in shell history), chezmoi (dotfile manager, 220x in shell history)"
+      "**Trusted repo**: The git repository the agent started in (~/workspace/apps/pindrop) \u2014 no remote configured, so it is local-only with no push destination; treat as private for commit scoping. Confidential material is fine to commit here; secrets and sensitive personal/entrusted data are never cleared into any repo by its visibility",
+      "**Org-specific CLIs**: Personal tooling, routine in this environment: mise (task runner/version manager \u2014 37x in this project, 209x in shell history), ccp (Claude profile manager, 54x in shell history), codegraph (71x in shell history), chezmoi (dotfile manager, 220x in shell history)"
     ]
   },
   "effortLevel": "xhigh",
@@ -222,8 +222,8 @@
   "skipDangerousModePermissionPrompt": true,
   "skipWorkflowUsageWarning": true,
   "statusLine": {
-    "command": "node $(ls -td $HOME/.claude/plugins/cache/claude-hud/claude-hud/*/ 2>/dev/null | head -1)dist/index.js",
-    "type": "command"
+    "type": "command",
+    "command": "bash $HOME/.local/bin/claude-hud"
   },
   "switchModelsOnFlag": true,
   "teammateMode": "auto",

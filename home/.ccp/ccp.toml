@@ -34,6 +34,14 @@ path = 'sources/morluto--rea'
 ref = 'main'
 installed = ['skills/reverse-engineer-anything']
 
+[sources.'nextlevelbuilder/ui-ux-pro-max-skill']
+registry = 'github'
+provider = 'git'
+url = 'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git'
+path = 'sources/nextlevelbuilder--ui-ux-pro-max-skill'
+ref = 'main'
+installed = ['skills/ui-ux-pro-max']
+
 [sources.'pbakaus/impeccable']
 registry = 'github'
 provider = 'git'

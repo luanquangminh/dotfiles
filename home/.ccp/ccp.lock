@@ -13,6 +13,9 @@ commit = 'dbd4588f9e1033efb41dad4bef2f7947c8993d44'
 [sources.'morluto/rea']
 commit = 'd0067ba34a39ea47dd7e11bb2e6169bc0938cc3f'
 
+[sources.'nextlevelbuilder/ui-ux-pro-max-skill']
+commit = 'd14efff8ed1faa4187f004f79926f428c8074ec7'
+
 [sources.'pbakaus/impeccable']
 commit = 'dad8dbb3aac21ad1fa236c110315ef4abece23e8'
 

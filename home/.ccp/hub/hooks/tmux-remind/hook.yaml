@@ -1,0 +1,6 @@
+name: tmux-remind
+type: PreToolUse
+matcher: Bash
+timeout: 5
+command: tmux-remind.sh
+interpreter: bash

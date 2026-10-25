@@ -1,5 +1,5 @@
 name: doc-rules
-type: Stop
+type: UserPromptSubmit
 timeout: 5
 command: check-doc-rules.sh
 interpreter: bash

@@ -1,0 +1,6 @@
+name: tmux-dev-guard
+type: PreToolUse
+matcher: Bash
+timeout: 5
+command: tmux-dev-guard.sh
+interpreter: bash

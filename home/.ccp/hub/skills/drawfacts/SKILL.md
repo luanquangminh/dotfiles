@@ -1,1 +1,0 @@
-/Users/samhv/workspace/tools/drawfacts/skills/drawfacts/SKILL.md

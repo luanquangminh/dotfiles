@@ -2,34 +2,34 @@
 type: Reference
 title: "Dotfile tasks"
 description: "The dot:* mise tasks, their chezmoi equivalents, and the pre-commit hook that uses dot:check."
-resource: https://github.com/samhvw8/dotfiles/blob/main/mise/conf.d/dotfiles.toml
+resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/conf.d/dotfiles.toml
 tags: [mise, tasks, git]
 status: stable
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-02T10:00:00Z }
 sources:
   - id: conf
-    resource: https://github.com/samhvw8/dotfiles/blob/main/mise/conf.d/dotfiles.toml
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/conf.d/dotfiles.toml
     title: Shared dotfiles config
   - id: save
-    resource: https://github.com/samhvw8/dotfiles/blob/main/mise/scripts/dot-save.sh
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/scripts/dot-save.sh
     title: dot-save.sh
   - id: pull
-    resource: https://github.com/samhvw8/dotfiles/blob/main/mise/scripts/dot-pull.sh
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/scripts/dot-pull.sh
     title: dot-pull.sh
   - id: push
-    resource: https://github.com/samhvw8/dotfiles/blob/main/mise/scripts/dot-push.sh
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/scripts/dot-push.sh
     title: dot-push.sh
   - id: rm
-    resource: https://github.com/samhvw8/dotfiles/blob/main/mise/scripts/dot-rm.py
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/scripts/dot-rm.py
     title: dot-rm.py
   - id: status
-    resource: https://github.com/samhvw8/dotfiles/blob/main/mise/scripts/dot-status.py
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/scripts/dot-status.py
     title: dot-status.py
   - id: add
-    resource: https://github.com/samhvw8/dotfiles/blob/main/mise/scripts/dot-add.sh
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/scripts/dot-add.sh
     title: dot-add.sh
   - id: check
-    resource: https://github.com/samhvw8/dotfiles/blob/main/mise/scripts/dot-check.py
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/scripts/dot-check.py
     title: dot-check.py
 ---
 

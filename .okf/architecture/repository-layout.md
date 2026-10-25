@@ -2,13 +2,13 @@
 type: Reference
 title: "Repository layout"
 description: "The directories and files of the dotfiles repository and what each is for."
-resource: https://github.com/samhvw8/dotfiles
+resource: https://github.com/luanquangminh/dotfiles
 tags: [layout, structure]
 status: stable
 generated: { by: claude-code/claude-opus-5-5, at: 2026-09-24T02:00:00Z }
 sources:
   - id: readme
-    resource: https://github.com/samhvw8/dotfiles/blob/main/README.md
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/README.md
     title: Repository README
 ---
 

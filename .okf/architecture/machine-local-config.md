@@ -7,13 +7,13 @@ status: stable
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-07T09:55:00Z }
 sources:
   - id: setup
-    resource: https://github.com/samhvw8/dotfiles/blob/main/setup.sh
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/setup.sh
     title: setup.sh
   - id: migrate
-    resource: https://github.com/samhvw8/dotfiles/blob/main/migrate-from-chezmoi.sh
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/migrate-from-chezmoi.sh
     title: migrate-from-chezmoi.sh
   - id: local-config
-    resource: https://github.com/samhvw8/dotfiles/blob/main/mise/scripts/local-config.sh
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/scripts/local-config.sh
     title: mise/scripts/local-config.sh
 ---
 

@@ -2,19 +2,19 @@
 type: Reference
 title: "omp configuration"
 description: "Which parts of ~/.omp/agent live in this repository, which ccp writes, and which stay machine-local."
-resource: https://github.com/samhvw8/dotfiles/tree/main/home/.omp/agent
+resource: https://github.com/luanquangminh/dotfiles/tree/main/home/.omp/agent
 tags: [omp, ccp, agents, hooks]
 status: stable
-generated: { by: google-antigravity/gemini-4-argon, at: 2026-10-24T05:15:00Z }
+generated: { by: claude-code/claude-fable-5-1, at: 2026-10-25T12:00:00Z }
 sources:
   - id: omp-dir
-    resource: https://github.com/samhvw8/dotfiles/tree/main/home/.omp/agent
+    resource: https://github.com/luanquangminh/dotfiles/tree/main/home/.omp/agent
     title: home/.omp/agent
   - id: dotfiles-conf
-    resource: https://github.com/samhvw8/dotfiles/blob/main/mise/conf.d/dotfiles.toml
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/conf.d/dotfiles.toml
     title: Shared dotfiles config
   - id: claude-mcp
-    resource: https://github.com/samhvw8/dotfiles/blob/main/mise/scripts/setup-claude-mcp.sh
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/scripts/setup-claude-mcp.sh
     title: setup-claude-mcp.sh
 ---
 

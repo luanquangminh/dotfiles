@@ -8,7 +8,7 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-08T15:00:00Z }
 stale_after: 2027-04-08
 sources:
   - id: conf
-    resource: https://github.com/samhvw8/dotfiles/blob/main/mise/conf.d/dotfiles.toml
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/conf.d/dotfiles.toml
     title: Shared dotfiles config
   - id: mise-brew
     resource: https://github.com/jdx/mise/blob/main/docs/bootstrap/packages/brew.md

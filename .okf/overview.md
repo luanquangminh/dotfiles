@@ -2,13 +2,13 @@
 type: Reference
 title: "Dotfiles overview"
 description: "What this repository is and how its pieces fit together; start here."
-resource: https://github.com/samhvw8/dotfiles
+resource: https://github.com/luanquangminh/dotfiles
 tags: [overview, dotfiles, mise]
 status: stable
-generated: { by: claude-code/claude-opus-5-5, at: 2026-09-24T02:00:00Z }
+generated: { by: claude-code/claude-fable-5-1, at: 2026-10-25T12:00:00Z }
 sources:
   - id: readme
-    resource: https://github.com/samhvw8/dotfiles/blob/main/README.md
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/README.md
     title: Repository README
 ---
 
@@ -19,6 +19,9 @@ managed with [mise](https://mise.jdx.dev). A single `mise bootstrap` installs
 system packages, clones repositories, links dotfiles and installs tools.[^readme]
 Until September 2026 the repository was managed with chezmoi; see the
 [migration decision](/decisions/chezmoi-to-mise.md).
+Since 2026-10-25 the repository lives at `luanquangminh/dotfiles` (git remote
+`origin`); the repository it was cloned from, `samhvw8/dotfiles`, stays as the
+`upstream` remote for pulling that author's later changes.
 
 # How the pieces fit
 

@@ -2,10 +2,10 @@
 type: Reference
 title: "opencode configuration"
 description: "Which parts of ~/.config/opencode live in this repository, which ccp writes, and which stay machine-local."
-resource: https://github.com/samhvw8/dotfiles/tree/main/home/.config/opencode
+resource: https://github.com/luanquangminh/dotfiles/tree/main/home/.config/opencode
 tags: [opencode, ccp, agents]
 status: stable
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-02T13:20:00Z }
+generated: { by: claude-code/claude-fable-5-1, at: 2026-10-25T12:00:00Z }
 sources:
   - id: ccp-opencode
     resource: https://github.com/samhvw8/claude-code-profile/blob/main/.okf/features/opencode.md

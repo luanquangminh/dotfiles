@@ -8,13 +8,13 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-09-28T03:00:00Z }
 stale_after: 2027-03-24
 sources:
   - id: setup
-    resource: https://github.com/samhvw8/dotfiles/blob/main/setup.sh
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/setup.sh
     title: setup.sh
   - id: tmux
-    resource: https://github.com/samhvw8/dotfiles/blob/main/home/.tmux.conf
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/home/.tmux.conf
     title: .tmux.conf
   - id: full
-    resource: https://github.com/samhvw8/dotfiles/blob/main/mise/config.toml
+    resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/config.toml
     title: Full install config
   - id: aube-trust
     resource: https://aube.jdx.dev/security#trust-policy

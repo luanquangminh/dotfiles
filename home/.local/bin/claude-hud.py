@@ -13,9 +13,10 @@ HOME = os.path.expanduser("~")
 CACHE = os.path.join(os.environ.get("TMPDIR", "/tmp"), "claude-hud-status.json")
 STATUS_URL = "https://status.claude.com/api/v2/status.json"
 BAR = 20
-C = {  # Tokyo Night
-    "ctx": "#7aa2f7", "use": "#bb9af7", "warn": "#e0af68", "crit": "#f7768e",
-    "ok": "#9ece6a", "info": "#7dcfff", "empty": "#3b4261", "label": "#565f89", "text": "#a9b1d6",
+C = {  # Dracula, saturated
+    "ctx": "#8be9fd", "use": "#bd93f9", "warn": "#ffb86c", "crit": "#ff5555",
+    "ok": "#50fa7b", "info": "#8be9fd", "empty": "#44475a", "label": "#f8f8f2", "text": "#f8f8f2",
+    "detail": "#a4b1e0",
 }
 RESET, DIM, BOLD = "\x1b[0m", "\x1b[2m", "\x1b[1m"
 CONFIG_SRC = os.path.join(HOME, ".config/claude-hud/config.json")   # tracked in dotfiles
@@ -40,9 +41,31 @@ def sync_config():
         pass
 
 
+def rgb(hex_):
+    return int(hex_[1:3], 16), int(hex_[3:5], 16), int(hex_[5:7], 16)
+
+
 def fg(hex_):
-    r, g, b = int(hex_[1:3], 16), int(hex_[3:5], 16), int(hex_[5:7], 16)
+    r, g, b = rgb(hex_)
     return f"\x1b[38;2;{r};{g};{b}m"
+
+
+def lerp(a, b, t):
+    return "#%02x%02x%02x" % tuple(round(x + (y - x) * t) for x, y in zip(rgb(a), rgb(b)))
+
+
+def cell_color(pos, base):
+    """Gradient along the bar: base until 55%, then toward amber, then red near the end."""
+    if pos < 0.55:
+        return base
+    if pos < 0.85:
+        return lerp(base, C["warn"], (pos - 0.55) / 0.30)
+    return lerp(C["warn"], C["crit"], (pos - 0.85) / 0.15)
+
+
+def embolden(line):
+    """Bold a plugin line: re-arm bold after every reset the plugin emits."""
+    return BOLD + line.replace(RESET, RESET + BOLD) + RESET
 
 
 def version_key(path):
@@ -83,8 +106,8 @@ def status_line():
     if not state:
         return None
     word, color = state
-    tail = f" {fg(C['label'])}·{RESET} {fg(C['text'])}{desc}{RESET}" if desc else ""
-    return f"{fg(color)}●{RESET} {fg(C['text'])}Claude{RESET} {fg(color)}{word}{RESET}{tail}"
+    tail = f" {fg(C['detail'])}·{RESET} {fg(C['text'])}{desc}{RESET}" if desc else ""
+    return f"{BOLD}{fg(color)}●{RESET} {BOLD}{fg(C['text'])}Claude{RESET} {BOLD}{fg(color)}{word}{RESET}{tail}"
 
 
 def fmt_tokens(n):
@@ -114,10 +137,11 @@ def fmt_reset(ts):
 def gauge(label, pct, base, detail):
     pct = max(0.0, min(100.0, float(pct)))
     filled = round(pct / 100 * BAR)
-    color = C["crit"] if pct >= 85 else C["warn"] if pct >= 60 else base
-    bar = f"{fg(color)}{'━' * filled}{fg(C['empty'])}{'━' * (BAR - filled)}{RESET}"
-    tail = f"  {fg(C['label'])}{detail}{RESET}" if detail else ""
-    return f"{fg(C['label'])}{label:<8}{RESET} {bar} {BOLD}{fg(color)}{pct:>3.0f}%{RESET}{tail}"
+    cells = "".join(f"{fg(cell_color(i / BAR, base))}━" for i in range(filled))
+    bar = f"{cells}{fg(C['empty'])}{'━' * (BAR - filled)}{RESET}"
+    pct_color = C["crit"] if pct >= 85 else C["warn"] if pct >= 60 else base
+    tail = f"  {fg(C['detail'])}{detail}{RESET}" if detail else ""
+    return f"{BOLD}{fg(C['label'])}{label:<8}{RESET} {bar} {BOLD}{fg(pct_color)}{pct:>3.0f}%{RESET}{tail}"
 
 
 def gauges(data):
@@ -157,6 +181,7 @@ def main():
         if st:
             extra.append(st)
         extra += gauges(data)
+        plugin = [embolden(l) for l in plugin]
         out = plugin[:1] + extra + plugin[1:] if plugin else extra
     except Exception:
         out = plugin

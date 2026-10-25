@@ -37,17 +37,17 @@
     "showWeeklyCost": true
   },
   "colors": {
-    "context": "#7aa2f7",
-    "usage": "#bb9af7",
-    "warning": "#e0af68",
-    "usageWarning": "#ff9e64",
-    "critical": "#f7768e",
-    "model": "#7dcfff",
-    "project": "#9ece6a",
-    "git": "#565f89",
-    "gitBranch": "#c0caf5",
-    "label": "dim",
-    "custom": "#565f89",
+    "context": "#8be9fd",
+    "usage": "#bd93f9",
+    "warning": "#ffb86c",
+    "usageWarning": "#ff79c6",
+    "critical": "#ff5555",
+    "model": "#8be9fd",
+    "project": "#50fa7b",
+    "git": "#6272a4",
+    "gitBranch": "#ff79c6",
+    "label": "#a4b1e0",
+    "custom": "#f1fa8c",
     "barFilled": "▰",
     "barEmpty": "▱"
   }

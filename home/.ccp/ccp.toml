@@ -26,6 +26,14 @@ path = 'sources/anthropics--skills'
 ref = 'main'
 installed = ['skills/frontend-design']
 
+[sources.'luanquangminh/claude-code-autopilot']
+registry = 'github'
+provider = 'git'
+url = 'https://github.com/luanquangminh/claude-code-autopilot.git'
+path = 'sources/luanquangminh--claude-code-autopilot'
+ref = 'main'
+installed = ['skills/autopilot']
+
 [sources.'morluto/rea']
 registry = 'github'
 provider = 'git'

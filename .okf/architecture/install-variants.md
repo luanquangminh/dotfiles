@@ -4,7 +4,7 @@ title: "Install variants"
 description: "Differences between the full and minimal installs and how a machine selects one."
 tags: [install, minimal, full]
 status: stable
-generated: { by: claude-code/claude-opus-5-5, at: 2026-11-01T00:00:00Z }
+generated: { by: claude-code/claude-fable-5-1, at: 2026-11-16T14:19:48Z }
 sources:
   - id: full
     resource: https://github.com/luanquangminh/dotfiles/blob/main/mise/config.toml
@@ -27,7 +27,7 @@ otherwise it links `mise/config.toml`.[^setup] Both load the shared
 
 | | Full | Minimal |
 |---|------|---------|
-| Tools | 55 tools incl. fzf, fd, bat, atuin, claude, ccp | jq, ripgrep, yq, node, python, uv[^minimal] |
+| Tools | 56 tools incl. fzf, fd, bat, atuin, claude, ccp | jq, ripgrep, yq, node, python, uv[^minimal] |
 | `~/.zshrc` | `home/.zshrc` | `home/.zshrc_minimal` |
 | Extra apt packages | build-essential, python3-pip, gnupg, terminator, zip, … | none |
 | tpm repo | yes | no |
